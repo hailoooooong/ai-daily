@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/daily.js",
-      "use": "@vercel/node"
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/api/daily.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/api/daily.js"
+      "dest": "/public/$1"
     }
   ]
 }
