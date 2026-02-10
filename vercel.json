@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/daily.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/daily.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/daily.js"
+    }
+  ]
+}
